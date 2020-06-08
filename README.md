@@ -11,9 +11,13 @@ Example was taken from https://gist.github.com/crisidev/bd52bdcc7f029be2f295
 
 ## Configuration
 Replace **HOST** and **FILE_DIR** variables at `config.sh` with your own.
-Also fill **ORGS** array with pairs ORGANIZATION:API_KEY.
+Also fill **optum** with API_KEY of the environment you want to import or export.
 
-## exporter
+## note: use don't import unless you change the API_KEYS for the next environment.
+
+## EXPORTER
+This will import the dashboards, data sources and alerts.
+To export.
 Run:
 ```
 ./exporter.sh
@@ -30,7 +34,8 @@ Expected output:
 
 Look for exported .json dashboards and datasources at **FILE_DIR** path
 
-## importer
+## IMPORTER
+This will import the dashboards, data sources and alerts. 
 To import all .json files from **FILE_DIR** to your Grafana:
 ```
 ./importer.sh
